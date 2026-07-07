@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>結 · 명식 나침반 — 이유진</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;700;900&family=Noto+Sans+KR:wght@300;400;500;700;900&family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f4f1ea; --bg2:#ebe7dd;
+    --txt:#252220; --txt-dim:#6f6b64; --ink:#0d0d0d;
+    --red:#2e5266; --hl-red:#2e5266; --hl-blue:#1d5a8a; --line:#ddd6c9;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--txt);
+    line-height:1.95;font-size:16.5px;font-weight:400;-webkit-font-smoothing:antialiased;letter-spacing:-.01em}
+  .serif{font-family:'Noto Serif KR',serif}
+  .wrap{max-width:660px;margin:0 auto;padding:0 24px}
+  .hl{background:var(--hl-red);color:#fff;font-weight:500;padding:.05em .18em;border-radius:3px;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone;line-height:1.8}
+  .hlb{background:var(--hl-blue);color:#eaf2fa;font-weight:500;padding:.05em .18em;border-radius:3px;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone;line-height:1.8}
+  b{color:var(--ink);font-weight:700}
+  .red{color:var(--red);font-weight:600}
+  .easy{display:block;background:#fff;border:1px solid var(--line);border-left:3px solid #b7a678;
+    border-radius:5px;padding:12px 15px;margin:14px 0;font-size:14.5px;color:#4a463f}
+  .easy b{color:#7a6a3a}
+
+  .cover{background:linear-gradient(170deg,#eef2f0 0%,#e4ebe8 100%);color:#23221f;border-bottom:1px solid var(--line);
+    text-align:center;padding:96px 24px 78px;position:relative;overflow:hidden}
+  .cover::before{content:"";position:absolute;inset:0;
+    background:radial-gradient(circle at 50% 8%, rgba(46,82,102,.10), transparent 50%);pointer-events:none}
+  .cover .dot{color:var(--red);letter-spacing:.4em;font-size:15px;margin-bottom:24px}
+  .cover h1{font-family:'Noto Serif KR',serif;font-weight:800;color:#23221f;font-size:clamp(44px,13vw,74px);line-height:1;}
+  .cover h1 .p{color:var(--red)}
+  .cover .name{margin-top:40px;font-family:'Noto Serif KR',serif;font-size:25px;font-weight:700;letter-spacing:.28em;color:#3a3a36}
+  .cover .bd{margin-top:8px;font-family:'Cormorant Garamond',serif;font-size:18px;letter-spacing:.24em;color:#7a7a72}
+  .cover .tag{margin-top:26px;font-size:12px;color:#8a8a80;letter-spacing:.05em}
+
+  .palja-wrap{padding:48px 24px 54px;border-bottom:1px solid var(--line)}
+  .palja{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;max-width:400px;margin:0 auto}
+  .palja .t{text-align:center;font-size:11.5px;color:var(--txt-dim)}
+  .gz{aspect-ratio:1/1;border-radius:10px;display:flex;align-items:center;justify-content:center;
+    font-family:'Noto Serif KR',serif;font-size:clamp(26px,8vw,40px);font-weight:700;color:#fff;margin:5px 0;
+    box-shadow:inset 0 0 0 1px rgba(0,0,0,.12),0 4px 14px rgba(0,0,0,.22)}
+  .w{background:linear-gradient(150deg,#2b5233,#173d21)}
+  .f{background:linear-gradient(150deg,#7a1a1f,#3d0c0f)}
+  .e{background:linear-gradient(150deg,#8a6c1e,#4a3a10)}
+  .m{background:linear-gradient(150deg,#cfd2d7,#8b8e93);color:#1a1a1a}
+  .wt{background:linear-gradient(150deg,#1d4a7c,#0d2340)}
+  .chip{max-width:440px;margin:22px auto 0;text-align:center;font-size:13px;color:var(--txt-dim);line-height:1.9}
+  .chip b{color:var(--ink)}
+
+  .sec{padding:54px 0 4px}
+  .sec .eyebrow{color:var(--red);font-size:12px;letter-spacing:.14em;font-weight:700;margin-bottom:10px}
+  .sec h2{font-family:'Noto Serif KR',serif;color:var(--ink);font-weight:900;font-size:clamp(23px,6vw,31px);line-height:1.3;margin-bottom:24px}
+  .sec h3{font-family:'Noto Sans KR';color:var(--ink);font-weight:700;font-size:18px;margin:30px 0 12px}
+  .sec p{margin-bottom:19px}
+  .sec p:last-child{margin-bottom:0}
+  .hr{height:1px;background:var(--line);margin:50px 0 0}
+  .pull{font-family:'Noto Serif KR',serif;font-weight:600;color:var(--ink);font-size:18.5px;line-height:1.65;
+    border-left:3px solid var(--red);padding:4px 0 4px 18px;margin:24px 0}
+
+  .tbl{width:100%;border-collapse:collapse;margin:14px 0 8px;font-size:13.5px}
+  .tbl th{background:#e4dfd3;color:var(--ink);font-weight:700;padding:9px 8px;text-align:left;border-bottom:2px solid #cfc7b6;font-size:12.5px}
+  .tbl td{padding:10px 8px;border-bottom:1px solid var(--line);vertical-align:top;color:#333}
+  .tbl td b{color:var(--ink)}
+  .tbl .yr{font-family:'Cormorant Garamond',serif;font-weight:600;color:var(--red);white-space:nowrap;font-size:15px}
+  .gzsm{font-family:'Noto Serif KR',serif;font-weight:700;color:#555;white-space:nowrap}
+  .mk{display:inline-block;font-size:10.5px;padding:1px 7px;border-radius:999px;font-weight:600;white-space:nowrap}
+  .mk-go{background:#e2f0e5;color:#2a7d3d}.mk-hold{background:#fbe6e6;color:#2e5266}.mk-mid{background:#f2ecda;color:#8a6c1e}
+
+  .match{background:#fff;border:1px solid var(--line);border-radius:10px;padding:22px 20px;margin:20px 0}
+  .match .mh{display:flex;align-items:center;gap:10px;font-weight:700;color:var(--ink);margin-bottom:4px}
+  .match .score{display:inline-flex;align-items:center;justify-content:center;background:var(--red);color:#fff;
+    font-family:'Cormorant Garamond',serif;font-weight:600;font-size:15px;border-radius:999px;padding:2px 12px}
+  .match p{font-size:14.5px;margin-bottom:0;color:#3a3a3a}
+  .paljaB{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;max-width:290px;margin:0 auto 6px}
+  .gzB{aspect-ratio:1/1;border-radius:9px;display:flex;align-items:center;justify-content:center;
+    font-family:'Noto Serif KR',serif;font-size:clamp(22px,7vw,34px);font-weight:700;color:#fff;margin:4px 0;
+    box-shadow:inset 0 0 0 1px rgba(0,0,0,.12),0 3px 10px rgba(0,0,0,.2)}
+
+  .closing{background:#233f4f;color:#eef2f0;text-align:center;padding:74px 24px 88px;margin-top:54px}
+  .closing .dot{color:var(--red);letter-spacing:.4em;margin-bottom:22px;font-size:14px}
+  .closing h2{font-family:'Noto Serif KR',serif;color:#fff;font-weight:900;font-size:clamp(23px,6.5vw,32px);line-height:1.32}
+  .closing h2 .p{color:var(--red)}
+  .disc{max-width:540px;margin:36px auto 0;font-size:12px;color:#6c6a67;line-height:1.85;border-top:1px solid #262629;padding-top:22px;font-weight:300}
+  .sig{margin-top:24px;font-family:'Cormorant Garamond',serif;font-size:15px;color:#7a7a7a;letter-spacing:.16em}
+
+  /* 結 concept cover */
+  .cover{padding:64px 24px 52px !important}
+  .cover .compass{color:#a6613e;font-size:26px;margin-bottom:20px;opacity:.85}
+  .cover .hanja{font-size:clamp(72px,22vw,120px) !important;line-height:.9;color:#242220 !important;font-weight:700;margin-bottom:4px}
+  .cover .brand{font-family:'Noto Serif KR',serif;font-size:15px;letter-spacing:.32em;color:#4a4842;margin-bottom:26px}
+  .cover .tagline{font-family:'Noto Serif KR',serif;font-size:16px;line-height:1.7;color:#5a574f;font-weight:400;max-width:340px;margin:0 auto}
+  .cover .namecard{margin-top:38px;padding-top:26px;border-top:1px solid rgba(46,82,102,.25);display:inline-block}
+  .cover .namecard .name{letter-spacing:.28em;color:#242220;font-size:22px;font-weight:600}
+  .cover .namecard .bd{font-family:'Cormorant Garamond',serif;color:#8a8880;letter-spacing:.2em;margin-top:5px;font-size:16px}
+  .cover .tag2{font-family:'Noto Serif KR',serif;font-size:14px;letter-spacing:.06em;color:#5a574f;margin-top:8px}
+</style>
+</head>
+<body>
+
+<section class="cover">
+  <div class="compass">◈</div>
+  <h1 class="serif hanja">結</h1>
+  <div class="brand">결 · 명식 나침반</div>
+  <div class="tagline">정답이 아니라 방향을.<br>당신의 타고난 결을 읽습니다.</div>
+  <div class="namecard">
+    <div class="name serif">이 유 진</div>
+    <div class="bd">1998 · 02 · 22 · 13:25</div>
+  </div>
+</section>
+
+<section class="palja-wrap">
+  <div class="palja">
+    <div><div class="t">식신</div><div class="gz wt">壬</div><div class="t">시</div></div>
+    <div><div class="t">나</div><div class="gz m">庚</div><div class="t">일</div></div>
+    <div><div class="t">편재</div><div class="gz w">甲</div><div class="t">월</div></div>
+    <div><div class="t">편인</div><div class="gz e">戊</div><div class="t">년</div></div>
+    <div><div class="gz f">午</div><div class="t">정관</div></div>
+    <div><div class="gz wt">子</div><div class="t">상관</div></div>
+    <div><div class="gz w">寅</div><div class="t">편재</div></div>
+    <div><div class="gz w">寅</div><div class="t">편재</div></div>
+  </div>
+  <div class="chip">
+    일간 <b>庚金(양금)</b> · <b>신약</b> · 도와주는 기운 <b>土·金</b><br>
+    木 재성 37.5 · 水 식상 25 · 火 관성 12.5 · 土 인성 12.5 · 金 비겁 12.5<br>
+    핵심 작용: <b>子午충</b>(일지↔시지)
+  </div>
+</section>
+
+<div class="wrap">
+
+  <!-- 원국 -->
+  <section class="sec">
+    <div class="eyebrow">STRUCTURE — 원국(原局)</div>
+    <h2>재능은 크게 타고났지만,<br>뿌리가 약한 사주</h2>
+    <p>네 사주의 중심(일간)은 <b>경금(庚金)</b>이야. 열 개 천간 중 가장 단단한 금속·무쇠. 판단이 빠르고, 애매한 걸 못 견디고, 기준을 세워 잘라내는 게 본능이지.</p>
+    <p>그런데 이 庚金이 나무의 계절인 <b>초봄(寅월)</b>에 태어났어. 봄엔 목(木)이 왕성하고 금(金)은 힘을 못 받거든(<b>실령·失令</b>). 게다가 원국에 일간을 <b>빼가는 기운</b>(재성 木·식상 水·관성 火)이 절반을 넘고, <b>도와주는 기운</b>(인성 土·비겁 金)은 얼마 없어. 그래서 결론은 —</p>
+    <p><span class="hl">넌 '신약(身弱)' 사주야.</span></p>
+    <p>신약은 말 그대로 <b>일간의 뿌리가 얕다</b>는 뜻이야. 재능·실행력(밖으로 쓰는 힘)은 강한데, 그걸 오래 버티게 해줄 체력·멘탈·기반(안에서 채우는 힘)이 상대적으로 약해. 그래서 네 인생 전략은 늘 <span class="hlb">'더 세게'보다 '뿌리부터 단단히, 오래'</span>가 먼저야. 이 원리가 재물·건강·관계를 전부 관통해.</p>
+    <p>그리고 원국에 <b>子午충(子午沖)</b>이 있어. 배우자 자리(일지 子)와 남편성(시지 午)이 정면으로 부딪히는 구조인데, 이게 네 연애·결혼의 핵심 축이야. 뒤에서 제대로 풀 거야.</p>
+
+    <h3>먼저, 십성(十星) 용어 사전</h3>
+    <p>사주 리딩에 계속 나오는 한자 용어야. 전부 <b>일간(나=庚金) 입장에서 그 기운이 무슨 역할을 하냐</b>를 부르는 이름이고, 딱 다섯 묶음이야. 헷갈리면 여기로 돌아와.</p>
+    <table class="tbl">
+      <tr><th>큰 분류</th><th>세부(편/정)</th><th>쉽게 말하면</th></tr>
+      <tr><td class="gzsm">재성(財)<br><span style="font-weight:400;color:#999;font-size:11px">돈·현실</span></td><td><b>편재</b> / 정재</td><td>내가 버는 돈. <b>편재</b>=사업·큰돈·유동자산, 정재=월급·고정수입. <span style="color:#2e5266">네 사주에 제일 많음</span></td></tr>
+      <tr><td class="gzsm">식상(食傷)<br><span style="font-weight:400;color:#999;font-size:11px">표현·재능</span></td><td>식신 / <b>상관</b></td><td>내가 밖으로 내보내는 것. 식신=꾸준한 실행, <b>상관</b>=튀는 창의·비판. 콘텐츠·강의가 여기</td></tr>
+      <tr><td class="gzsm">관성(官)<br><span style="font-weight:400;color:#999;font-size:11px">직장·남편</span></td><td>편관 / 정관</td><td>나를 누르는 것 = 직장·명예·규율. <b>여자한텐 남자·배우자</b>. 정관=남편성</td></tr>
+      <tr><td class="gzsm">인성(印)<br><span style="font-weight:400;color:#999;font-size:11px">공부·안정</span></td><td>편인 / 정인</td><td>나를 채워주는 것 = 공부·문서·자격·뒷배·안정감. 신약인 너에겐 <span style="color:#2e5266">보약 같은 기운</span></td></tr>
+      <tr><td class="gzsm">비겁(比劫)<br><span style="font-weight:400;color:#999;font-size:11px">동료·경쟁</span></td><td>비견 / 겁재</td><td>나와 같은 편 = 동료·경쟁자·자존심·독립심. <b>겁재</b>는 지출·동업 이슈로도 옴</td></tr>
+    </table>
+    <div class="easy"><b>딱 다섯 개만 기억해</b> — <b>재성=돈</b>, <b>식상=내 재능·표현</b>, <b>관성=직장·남편</b>, <b>인성=공부·안정(내 편)</b>, <b>비겁=동료·경쟁(내 편)</b>. 뒤에 '편/정'이 붙는 건 그 안에서 큰 갈래(편)냐 안정 갈래(정)냐 구분일 뿐이야.</div>
+  </section>
+  <div class="hr"></div>
+
+  <!-- 성격 -->
+  <section class="sec">
+    <div class="eyebrow">CORE — 성격</div>
+    <h2>겉은 칼, 속은 예민한 창작자</h2>
+    <p>겉모습은 딱 庚金이야. 또렷하고, 결정 빠르고, 은근 쿨해 보여. 근데 배우자 자리에 <b>상관</b>(=내 안에서 터져 나오는 표현·창의·삐딱함)이 앉아 있어서 속은 완전 달라.</p>
+    <p><span class="hl">남이 짜놓은 틀을 그대로 못 받아들이고 "이거 왜 이렇게 해?"부터 뜨는 게 기본 세팅이야.</span> 그래서 뭘 하든 네 방식으로 다시 짜야 직성이 풀려. 이게 남들과 다른 '결'이 나오는 이유고.</p>
+    <p>대신 예민해. 겉으론 쿨한 척하면서 피드백 하나를 며칠씩 곱씹지. <span class="hlb">감정은 만들어서(글·영상·작업물로) 뱉으면 풀리는데, 안에 쌓아두면 그게 다 체력으로 빠져나가.</span> 넌 뭔가 만들어낼 때 제일 건강한 사람이야.</p>
+  </section>
+  <div class="hr"></div>
+
+  <!-- 재물 -->
+  <section class="sec">
+    <div class="eyebrow">WEALTH — 돈</div>
+    <h2>버는 재주는 타고났는데,<br>새는 구멍이 문제</h2>
+    <p>네 돈 버는 방식은 <b>상관생재</b>야. 어려운 말 같지만 뜻은 간단해 — <span class="hl">'내가 만든 것 → 곧바로 돈'이 되는 구조야.</span> 표현·기획·창작이 그대로 수입으로 연결돼. 좋은 재주야.</p>
+    <p>근데 함정이 있어. 돈에 해당하는 기운(재성)이 사주에서 제일 많은데(37.5%), 정작 그걸 감당할 일간이 약해. 이걸 <b>재다신약(財多身弱)</b>이라고 해 — <span class="hlb">재물의 판은 크게 벌어져 있는데, 그걸 다 내 것으로 거둘 힘이 부족한 구조</span>야. 그래서 벌긴 잘 버는데 그만큼 새어나가고, 큰돈을 무리하게 굴리려다 오히려 몸·멘탈이 먼저 지쳐. "일한 만큼 안 남는 느낌"의 정체가 이거야.</p>
+    <p>그래서 큰돈은 언제 실제로 붙냐 — <span class="hlb">일간이 힘을 받는 대운(인성·비겁운, 뒤 대운표의 庚戌 이후)이 와야 재물을 감당해.</span> 지금(20대 후반)은 목돈 승부가 아니라 씨 뿌리는 때야. 단타·코인·큰 빚 레버리지는 재다신약에 특히 독이고, 꾸준히 만들어 파는 상관생재가 정답이야.</p>
+    <div class="easy"><b>이 파트 용어</b> — <b>재성</b>=돈(네 사주 제일 많음). <b>편재</b>=사업·유동적인 큰돈(월급 아님). <b>상관생재</b>=내 재능(식상)이 돈(재성)으로 이어지는 회로, 즉 '만든 게 곧 돈'. <b>재다신약</b>=돈 판은 큰데 그걸 챙길 힘(일간)이 약한 구조.</div>
+  </section>
+  <div class="hr"></div>
+
+  <!-- ★ 돈 버는 법 상세 ★ -->
+  <section class="sec">
+    <div class="eyebrow">MONEY PLAYBOOK — 너한테 맞는 돈 버는 법</div>
+    <h2>너는 '열린 문' 하나만<br>크게 열려 있다</h2>
+    <p>돈 버는 방법은 사람마다 열린 문이 달라. 사주가 알려주는 건 "일해라 마라"가 아니라 <span class="hl">"네 앞에 어떤 문이 열려 있고 어떤 문이 닫혀 있냐"</span>야. 다른 사주랑 비교하면 확실해:</p>
+    <table class="tbl">
+      <tr><th>사주 유형</th><th>열린 문</th></tr>
+      <tr><td>재성 강·신강</td><td>투자·사업으로 <b>크게 굴려서</b> 번다. 레버리지·한 방 OK.</td></tr>
+      <tr><td>관성 강</td><td>조직에서 <b>승진·직급</b>으로 번다. 사업하면 오히려 손해.</td></tr>
+      <tr><td style="color:#2e5266"><b>너(상관생재·신약)</b></td><td><b>내 이름 걸고 만든 결과물을 여러 개로 파는 것.</b> 이 문 하나가 크게 열려 있음.</td></tr>
+    </table>
+    <p>그러니까 네 재테크의 정답은 <span class="hlb">"일해서 벌어라"가 아니라 "굴려서 버는 문은 닫혀 있으니, 만들어서 버는 문에만 힘을 몰아라"</span>야. 방향을 좁혀주는 거지. 안 그러면 열린 문 놔두고 자꾸 닫힌 문(투기)을 두드리다 잃어. 실제로 그랬고.</p>
+
+    <h3>네 '열린 문'을 구체적으로 열면</h3>
+    <p><b>① 수입원은 하나가 아니라 여러 개로.</b> 넌 <b>편재</b>라 파이프라인이 하나면 그릇이 안 살아. "회사 월급"만이 아니라 강의·콘텐츠·기획·자문처럼 <span class="hl">여러 갈래가 동시에 돌 때 재성이 깨어나.</span> 남들이 "하나만 파라" 해도 넌 여러 개일 때 돈이 붙는 사주야.</p>
+    <p><b>② 반드시 '내 이름'이 남게.</b> <b>상관</b>은 남 밑에서 시키는 대로만 하면 힘이 죽어. 같은 일을 해도 '누가 시킨 일'보다 '내 이름 붙은 일'일 때 결과물의 질도 돈도 달라져. <span class="hlb">조직에 있어도 네 이름으로 남는 자산(작업물·포트폴리오·콘텐츠)을 계속 빼내야</span> 하는 이유야.</p>
+    <p><b>③ 닫힌 문은 소액으로만.</b> 투자(주식·코인)는 네 메인이 아니라 '남는 돈 묻어두기'용. 단타·레버리지·테마주는 재다신약이 반복해 잃는 길이라, 굳이 한다면 <b>잃어도 되는 소액 · 장기 적립식 · 빚 없이.</b> 이 선 넘으면 거의 진다.</p>
+
+    <h3>나이별 돈 전략</h3>
+    <p style="font-weight:700;color:var(--red);margin:22px 0 4px;font-size:14px">◆ 지금~35세 (辛亥 대운) — 씨 뿌리고 문 넓히기</p>
+    <p>재물을 크게 감당하기엔 아직 뿌리가 얕은 구간. <b>목돈 승부는 금물.</b> 대신:</p>
+    <ul style="list-style:none;padding:0;margin:6px 0 14px">
+      <li style="position:relative;padding-left:22px;margin-bottom:9px;font-size:14.5px"><span style="position:absolute;left:0;color:#2e5266">·</span><b>파이프라인 실험:</b> 강의·콘텐츠·기획 등 수입원을 2~3개로 늘려 뭐가 잘 붙는지 테스트.</li>
+      <li style="position:relative;padding-left:22px;margin-bottom:9px;font-size:14.5px"><span style="position:absolute;left:0;color:#2e5266">·</span><b>실력·이름에 재투자:</b> 번 돈을 굴리기보다 전문성·포트폴리오·개인 브랜드에 넣기(용신 인성).</li>
+      <li style="position:relative;padding-left:22px;margin-bottom:9px;font-size:14.5px"><span style="position:absolute;left:0;color:#2e5266">·</span><b>종잣돈은 '안 잃는' 곳에:</b> 예적금·비상금 두툼하게. 신약은 지킬 방패가 먼저.</li>
+      <li style="position:relative;padding-left:22px;margin-bottom:9px;font-size:14.5px"><span style="position:absolute;left:0;color:#2e5266">·</span><b>투자는 소액 적립식만.</b> 이 시기 한 방 노리면 십중팔구 잃음.</li>
+    </ul>
+    <p style="font-weight:700;color:var(--red);margin:22px 0 4px;font-size:14px">◆ 36~45세 (庚戌 대운) — 만든 걸 자산으로 굳히기</p>
+    <p>뿌리가 강해져 <b>드디어 큰 재물을 감당하는 구간.</b> 20대에 뿌린 게 여기서 수확돼.</p>
+    <ul style="list-style:none;padding:0;margin:6px 0 14px">
+      <li style="position:relative;padding-left:22px;margin-bottom:9px;font-size:14.5px"><span style="position:absolute;left:0;color:#2e5266">·</span><b>본격 수익화:</b> 검증된 파이프라인을 사업·시스템으로 키우기(2034~ 재성운).</li>
+      <li style="position:relative;padding-left:22px;margin-bottom:9px;font-size:14.5px"><span style="position:absolute;left:0;color:#2e5266">·</span><b>흙에 묻기:</b> 용신이 土 → 부동산·실물 등 '깔고 앉는 자산'으로 전환. 투기 종목보다 이게 맞음.</li>
+      <li style="position:relative;padding-left:22px;margin-bottom:9px;font-size:14.5px"><span style="position:absolute;left:0;color:#2e5266">·</span><b>2041년은 방어:</b> 겁재 겹치는 해라 큰 투자·보증·동업 금물.</li>
+    </ul>
+    <p style="font-weight:700;color:var(--red);margin:22px 0 4px;font-size:14px">◆ 46세~ (己酉 대운) — 이름값이 알아서 버는 단계</p>
+    <ul style="list-style:none;padding:0;margin:6px 0 8px">
+      <li style="position:relative;padding-left:22px;margin-bottom:9px;font-size:14.5px"><span style="position:absolute;left:0;color:#2e5266">·</span><b>전문성=수익:</b> 쌓은 이름·전문성으로 가르치고 자문하는 구조. 예전만큼 안 갈아넣어도 돈이 돎.</li>
+      <li style="position:relative;padding-left:22px;margin-bottom:9px;font-size:14.5px"><span style="position:absolute;left:0;color:#2e5266">·</span><b>자산 관리 모드:</b> 새로 벌기보다 모은 걸 지키고 굴리는 안정 운용.</li>
+    </ul>
+
+    <h3>그 1000만원은</h3>
+    <p><span class="hl">'수업료'로 확정하고 만회하려 들지 마.</span> 또 지르면 재다신약 루프에 다시 들어가. 그 돈은 <b>본업 소득으로 시간 두고 메꾸는 게</b> 가장 확실한 회복이고, 어차피 36세부터 재물이 크게 붙는 흐름이라 장기 그림엔 흠집이지 골절이 아니야. 지금 할 건 '복구'가 아니라 '방식 교체'.</p>
+    <div class="pull">네 돈 공식 한 줄 — <span class="red">닫힌 문(투기) 그만 두드리고, 열린 문(만들어 팔기)에 다 몰아라.</span> 문 하나만 크게 열린 대신, 그 문은 평생 안 닫힌다.</div>
+    <div class="disc" style="background:none;border-top:1px solid var(--line);color:#8a857c;max-width:none;margin-top:26px;padding-top:18px">※ 이 파트는 사주 해석 + 일반적 관점이야. 개인 맞춤 투자 추천이 아니고, 실제 투자·재정 결정은 네 판단과 전문가 상담으로 해야 해.</div>
+  </section>
+  <div class="hr"></div>
+
+  <!-- ★ 사업 전략 ★ -->
+  <section class="sec">
+    <div class="eyebrow">BUSINESS — 사업은 네 열린 문이다</div>
+    <h2>투자는 닫힌 문,<br>사업은 활짝 열린 문</h2>
+    <p>이거 헷갈리면 안 돼. 네 사주에서 <b>투자(굴리기)와 사업(만들어 팔기)은 정반대 문</b>이야. 투자는 닫혀 있지만 — <span class="hl">사업은 활짝 열려 있어. 너는 사업이 맞는 사주야.</span></p>
+    <p>왜냐면: <b>편재</b>(사업·유동적인 돈)가 네 사주에서 제일 강하고, <b>상관생재</b>(만든 걸 곧바로 돈으로)가 사업의 핵심 엔진이거든. 게다가 <b>관성이 약해</b> 조직에 매이기보다 내 판을 벌이는 쪽으로 자연스럽게 기울어. <span class="hlb">투자로 잃은 돈을, 사업으론 벌 수 있는 사주라는 뜻이야.</span></p>
+
+    <h3>단, 조건은 '신약'이 정한다</h3>
+    <p>사업이 맞다고 아무 사업이나 되는 건 아니야. 신약이라 <b>규모와 방식</b>이 정해져 있어.</p>
+    <table class="tbl">
+      <tr><th>맞는 사업 ○</th><th>안 맞는 사업 ✕</th></tr>
+      <tr><td><b>1인·소수 정예</b> 규모</td><td>직원 많이 두는 노동집약형</td></tr>
+      <tr><td>재고·큰자본 없는 <b>지식·콘텐츠·서비스형</b><br>(강의·컨설팅·기획·교육·온라인 서비스)</td><td>큰 초기자본·<b>빚 끼는</b> 사업</td></tr>
+      <tr><td>내 재능이 <b>직접 상품</b>인 구조<br>(상관생재가 곧 돈)</td><td>재고 쌓고 유통하는 사업<br>(돈 묶이면 신약이 흔들림)</td></tr>
+      <tr><td>실무·정산 받쳐줄 <b>파트너 1명</b> 동반</td><td>"같이 크게" 벌이는 <b>동업</b><br>(겁재운에 정산 분쟁)</td></tr>
+    </table>
+    <div class="easy"><b>한 줄로</b> — 네 사업은 <b>'몸집 키우기'가 아니라 '내 재능을 상품으로 얇고 단단하게 파는 것'</b>에서 터진다. "사업 = 큰돈 태워 크게 벌인다"는 이미지가 있으면 지워. 그건 신약한텐 독이야.</div>
+
+    <h3>사업 타이밍 로드맵</h3>
+    <table class="tbl">
+      <tr><th>시기</th><th>할 일</th></tr>
+      <tr><td class="yr">지금~35세<br><span style="font-weight:400;color:#999;font-size:11px">辛亥</span></td><td><b>작게 여러 개 실험.</b> 큰 자본 태우지 말고, 뭐가 되는지 테스트하는 구간. 지금 이미 여러 개 벌여놓은 게 사주엔 맞는 그림. <span class="mk mk-mid">실험·검증</span></td></tr>
+      <tr><td class="yr">36~45세<br><span style="font-weight:400;color:#999;font-size:11px">庚戌</span></td><td>뿌리가 강해지는 구간. <b>검증된 걸 본격 사업으로 키우기.</b> 여기서 크게 자리 잡는다(2034~ 재성운). <span class="mk mk-go">본격 확장</span></td></tr>
+      <tr><td class="yr">46세~<br><span style="font-weight:400;color:#999;font-size:11px">己酉</span></td><td>사업이 시스템으로 도는 단계. 이름값·전문성이 알아서 수익 내는 구조로 안착.</td></tr>
+    </table>
+    <p>순서로 보면 — <span class="hl">지금은 작게 여러 개 실험 → 뭐가 되는지 확인 → 36세부터 되는 거에 몰아서 키우기.</span> 이게 네 사업 로드맵이야. 지금 조급하게 다 걸지 말고, '실험 단계'라는 걸 기억해.</p>
+    <div class="pull">투자로 증명하려던 걸 사업으로 증명하는 사주. <span class="red">굴리지 말고 만들어라 — 판은 네가 벌일 때 커진다.</span></div>
+  </section>
+  <div class="hr"></div>
+
+  <!-- 커리어 -->
+  <section class="sec">
+    <div class="eyebrow">CAREER — 일</div>
+    <h2>조직으로 이름 쌓고,<br>그걸 네 걸로 빼내라</h2>
+    <p>조직·규율을 뜻하는 기운(관성)이 약해서, 넌 한 곳에 오래 매이는 걸 답답해해. 무게추는 '내 이름으로 사는 쪽'에 기울어 있어.</p>
+    <p>근데 신약이라 지금 다 던지고 독립하면 위험해. 그래서 정답은 <span class="hl">조직을 '이름값·경력 쌓는 무대'로 쓰고, 그걸 계속 네 개인 자산(작업물·기록·실력)으로 빼내는 것.</span></p>
+    <p>창업·1인 사업? 사업 감각 자체는 있어. 근데 <span class="hlb">혼자 다 짊어지는 큰 조직은 방전 위험이 커.</span> 하려면 실무·정산 받쳐줄 파트너 두고 '얇고 단단한 팀'으로 가는 게 네 최적 규모야.</p>
+    <div class="easy"><b>이 파트 용어</b> — <b>관성</b>=직장·조직·규율(네 사주에 약함 → 얽매이는 걸 답답해함). <b>인성</b>=공부·자격·전문성·안정된 뒷배(네가 살려야 할 기운이라, 배우고 실력 쌓는 게 곧 운을 키움).</div>
+  </section>
+  <div class="hr"></div>
+
+  <!-- 대운 -->
+  <section class="sec">
+    <div class="eyebrow">MAJOR LUCK — 대운(大運)</div>
+    <h2>10년 단위 대운,<br>인생의 큰 흐름</h2>
+    <p>사주 원국은 타고난 그릇이라 평생 안 바뀌지만, 그 위로 <b>10년마다 한 번씩 기운이 갈아드는 게 대운</b>이야. 같은 사주라도 어떤 대운을 지나느냐에 따라 재물·관계·건강의 흐름이 달라져.</p>
+    <p>네 원국은 <b>신약(身弱)</b>이라, 일간(庚金)을 <b>도와주는 기운 — 인성(土)과 비겁(金)</b>이 들어오는 대운이 힘을 받는 시기야. 반대로 나를 빼가는 재성(木)·식상(水)·관성(火)이 강한 대운엔 벌여도 소모가 커. 이 기준으로 표를 보면 돼.</p>
+    <table class="tbl">
+      <tr><th>나이</th><th>대운</th><th>이 시기 흐름</th></tr>
+      <tr><td class="yr">16–25</td><td class="gzsm">壬子<br><span style="font-weight:400;color:#999;font-size:11px">식신+상관</span></td><td>배우고 만들고, 재능을 처음 세상에 내보낸 시기. 표현·창작의 뿌리가 잡힘.</td></tr>
+      <tr><td class="yr" style="color:#2e5266;font-weight:700">26–35<br><span style="font-size:10px;color:#2e5266">지금</span></td><td class="gzsm">辛亥<br><span style="font-weight:400;color:#999;font-size:11px">겁재+식신</span></td><td><b>확장·실험기.</b> 亥水(식상)가 활동·아웃풋을 키우고 辛金(겁재)이 독립심을 세운다. 기회는 많지만 겁재라 지출·경쟁·나눠먹기도 커서 <span class="mk mk-hold">돈·사람 관리 주의</span>. 벌이는 좋아도 쌓이진 않는 구간.</td></tr>
+      <tr><td class="yr">36–45</td><td class="gzsm">庚戌<br><span style="font-weight:400;color:#999;font-size:11px">비견+편인</span></td><td><b>인생의 결실기.</b> 戌土(인성)가 약한 일간을 든든히 받쳐주고 庚金(비견)이 힘을 보탠다. <span class="hl">그동안 벌여놓은 게 자산·부동산·전문성으로 굳어지는 때.</span> 결혼·집·재산이 실제로 자리 잡는 구간이 바로 여기다.</td></tr>
+      <tr><td class="yr">46–55</td><td class="gzsm">己酉<br><span style="font-weight:400;color:#999;font-size:11px">정인+겁재</span></td><td>권위·전문성의 시기. 己土 인성이 명예·자격을 세워, 가르치고 이름값으로 사는 구조로 안착.</td></tr>
+      <tr><td class="yr">56–65</td><td class="gzsm">戊申<br><span style="font-weight:400;color:#999;font-size:11px">편인+비견</span></td><td>기반이 가장 두터워지는 안정기. 戊土·申金이 일간을 최대로 받쳐, 쌓아온 시스템이 알아서 도는 단계.</td></tr>
+    </table>
+
+    <h3>핵심 — 인생의 무게중심이 30대 중반에 넘어간다</h3>
+    <p>지금 <b>辛亥 대운(26~35세)</b>은 아직 나를 빼가는 기운(식상·겁재)이 섞인 <span class="hlb">'벌이고 뿌리는 시기'</span>야. 그리고 <b>庚戌 대운(36~45세)</b>부터 인성·비겁이 일간을 받쳐주면서 <span class="hl">'벌이는 사람'에서 '가진 사람'으로 넘어가.</span> 20대에 뿌려둔 게 이때 결실로 돌아와.</p>
+    <p>그래서 20대 후반의 정답은 하나야 — <b>조급하게 큰 결판(무리한 투자·성급한 독립) 내지 말고, 판을 넓게 벌려두면서 몸·멘탈 안 상하게 버티는 것.</b> 재다신약은 이 시기에 무리하면 반드시 탈이 나고, 반대로 잘 버티면 30대 중반부터 크게 수확한다.</p>
+  </section>
+  <div class="hr"></div>
+
+  <!-- 세운 상세 -->
+  <section class="sec">
+    <div class="eyebrow">YEAR LUCK — 세운(歲運) 26~45세 전체</div>
+    <h2>대운 안을 1년 단위로<br>펼쳐보면</h2>
+    <p>대운이 10년짜리 큰 틀이라면, 그 안에서 <b>해마다 바뀌는 기운이 세운</b>이야. 원국의 子·午·寅과 그 해 글자가 충(沖)·합(合)·형(刑)을 일으키느냐로 흐름이 갈려. 26~45세를 한 해씩 펼치면 이래.</p>
+
+    <p style="font-weight:700;color:var(--red);margin:24px 0 4px;font-size:14px">◆ 辛亥 대운 (26~35세) — 확장·실험기</p>
+    <table class="tbl">
+      <tr><th>나이</th><th>세운</th><th>그 해 흐름</th></tr>
+      <tr><td class="yr">26<small style="display:block;color:#999">2024</small></td><td class="gzsm">甲辰<br><span style="font-weight:400;color:#999;font-size:11px">편재+편인</span></td><td>辰土 인성이 뿌리를 보강해 무난한 출발. 편재라 활동·기회는 넓어짐. 씨 뿌리기 시작.</td></tr>
+      <tr><td class="yr">27<small style="display:block;color:#999">2025</small></td><td class="gzsm">乙巳<br><span style="font-weight:400;color:#999;font-size:11px">정재+편관</span></td><td>巳火 관성 등장 → 일·이성 이슈 올라옴. 단 巳가 원국 寅과 <b>형(刑)</b> → 마찰·구설 주의. 정재라 현실·수입 감각.</td></tr>
+      <tr><td class="yr">28<small style="display:block;color:#999">2026</small></td><td class="gzsm">丙午<br><span style="font-weight:400;color:#999;font-size:11px">편관+정관</span></td><td>관살이 한꺼번에 들어오고 <b>子午충 재발</b>. 감정·관계 격동. <span class="mk mk-hold">결정 보류</span> 8~10월 특히 말조심.</td></tr>
+      <tr><td class="yr">29<small style="display:block;color:#999">2027</small></td><td class="gzsm">丁未<br><span style="font-weight:400;color:#999;font-size:11px">정관+정인</span></td><td>丁정관+未정인 = <b>관인상생</b>. 午未합으로 충도 완화. 관계·직장 '틀'이 잡힘. <span class="mk mk-go">안정·계약</span></td></tr>
+      <tr><td class="yr">30<small style="display:block;color:#999">2028</small></td><td class="gzsm">戊申<br><span style="font-weight:400;color:#999;font-size:11px">편인+비견</span></td><td>인성·비겁으로 뿌리 강해짐. 단 申이 寅과 <b>寅申충(역마충)</b> → 이사·해외·이동수 큰 해. <span class="mk mk-mid">환경 전환</span></td></tr>
+      <tr><td class="yr">31<small style="display:block;color:#999">2029</small></td><td class="gzsm">己酉<br><span style="font-weight:400;color:#999;font-size:11px">정인+겁재</span></td><td>己정인이 문서·자격·배움을 세움. 酉겁재라 지출·경쟁 관리. 실속 다지는 정비의 해.</td></tr>
+      <tr><td class="yr">32<small style="display:block;color:#999">2030</small></td><td class="gzsm">庚戌<br><span style="font-weight:400;color:#999;font-size:11px">비견+편인</span></td><td><b>寅午戌 삼합 완성</b> → 관성(남편성) 크게 발동. 비견·인성이 뿌리를 받쳐 감당 가능. <span class="mk mk-go">결혼·커리어·재산 점프</span></td></tr>
+      <tr><td class="yr">33<small style="display:block;color:#999">2031</small></td><td class="gzsm">辛亥<br><span style="font-weight:400;color:#999;font-size:11px">겁재+식신</span></td><td>亥가 寅과 <b>寅亥합(목→재성)</b>. 활동·콘텐츠·재물 확장. 겁재라 협업 정산 명확히.</td></tr>
+      <tr><td class="yr">34<small style="display:block;color:#999">2032</small></td><td class="gzsm">壬子<br><span style="font-weight:400;color:#999;font-size:11px">식신+상관</span></td><td>식상 최고조 → 표현·창작·기획력 폭발. 새 프로젝트 론칭 유리. 단 子子 겹쳐 <b>예민·불면</b> 주의.</td></tr>
+      <tr><td class="yr">35<small style="display:block;color:#999">2033</small></td><td class="gzsm">癸丑<br><span style="font-weight:400;color:#999;font-size:11px">상관+정인</span></td><td>丑이 子와 <b>子丑합</b> → 배우자궁 안정. 정인 보강. 관계·집·자격 정리에 좋은 마무리 해.</td></tr>
+    </table>
+
+    <p style="font-weight:700;color:var(--red);margin:30px 0 4px;font-size:14px">◆ 庚戌 대운 (36~45세) — 결실·축적기</p>
+    <table class="tbl">
+      <tr><th>나이</th><th>세운</th><th>그 해 흐름</th></tr>
+      <tr><td class="yr">36<small style="display:block;color:#999">2034</small></td><td class="gzsm">甲寅<br><span style="font-weight:400;color:#999;font-size:11px">편재+편재</span></td><td><b>재성운 진입.</b> 뿌리가 강해진 상태라 이제 큰 재물을 감당한다. 사업·투자 기회 크게 열림. <span class="mk mk-go">재물 시작</span></td></tr>
+      <tr><td class="yr">37<small style="display:block;color:#999">2035</small></td><td class="gzsm">乙卯<br><span style="font-weight:400;color:#999;font-size:11px">정재+정재</span></td><td>정재운 → 안정 수입·자산 구조 정착. 단 卯가 子와 <b>子卯형</b> → 관계·건강 예민, 구설 주의. <span class="mk mk-go">축적</span></td></tr>
+      <tr><td class="yr">38<small style="display:block;color:#999">2036</small></td><td class="gzsm">丙辰<br><span style="font-weight:400;color:#999;font-size:11px">편관+편인</span></td><td>辰土 인성이 받쳐주며 관인상생. 사회적 지위·책임 올라감. 승진·자리 굳히기 좋은 해.</td></tr>
+      <tr><td class="yr">39<small style="display:block;color:#999">2037</small></td><td class="gzsm">丁巳<br><span style="font-weight:400;color:#999;font-size:11px">정관+편관</span></td><td>관성 강해 명예·직책 부각. 단 巳가 寅과 <b>형(刑)</b> → 과부하·마찰 주의. 벌이기보단 관리.</td></tr>
+      <tr><td class="yr">40<small style="display:block;color:#999">2038</small></td><td class="gzsm">戊午<br><span style="font-weight:400;color:#999;font-size:11px">편인+정관</span></td><td>午가 다시 <b>子午충</b> → 관계·건강 변동 재점화. 편인이 보강하나 충년이라 <span class="mk mk-hold">몸·관계 조심</span></td></tr>
+      <tr><td class="yr">41<small style="display:block;color:#999">2039</small></td><td class="gzsm">己未<br><span style="font-weight:400;color:#999;font-size:11px">정인+정인</span></td><td>인성 가득 + 午未합. 문서·부동산·안정. 가장 편안하고 자리 잡히는 해. <span class="mk mk-go">안정</span></td></tr>
+      <tr><td class="yr">42<small style="display:block;color:#999">2040</small></td><td class="gzsm">庚申<br><span style="font-weight:400;color:#999;font-size:11px">비견+비견</span></td><td>비겁 강 + 申이 寅과 <b>寅申충(역마)</b> → 이동·확장·독립수. 단 재물 분산 주의, 동업이면 경계 명확히.</td></tr>
+      <tr><td class="yr">43<small style="display:block;color:#999">2041</small></td><td class="gzsm">辛酉<br><span style="font-weight:400;color:#999;font-size:11px">겁재+겁재</span></td><td>겁재 겹침 → <b>지출·재물 누수 최대 주의 구간.</b> 큰 투자·보증·동업 금물. 방어의 해. <span class="mk mk-hold">재물 관리</span></td></tr>
+      <tr><td class="yr">44<small style="display:block;color:#999">2042</small></td><td class="gzsm">壬戌<br><span style="font-weight:400;color:#999;font-size:11px">식신+편인</span></td><td>戌이 寅午와 <b>삼합 화국</b> 재형성 + 식신. 표현·사업 다시 활발, 인성 보강으로 안정 동반. <span class="mk mk-go">활동+안정</span></td></tr>
+      <tr><td class="yr">45<small style="display:block;color:#999">2043</small></td><td class="gzsm">癸亥<br><span style="font-weight:400;color:#999;font-size:11px">상관+식신</span></td><td>식상 강 + 寅亥합. 대운 마무리. 표현·정리·다음 판을 위한 전환 준비 구간.</td></tr>
+    </table>
+    <p style="margin-top:16px"><span class="hl">한눈 정리 — 26~35세는 벌이고 뿌리는 시기(2028 이동·2030 결혼점프가 하이라이트), 36세부터 재물이 실제로 붙기 시작해 41세 전후 안정에 이른다.</span> 주의년은 충·형·겁재가 겹치는 <b>2026·2038(子午충), 2035(子卯형), 2041(겁재)</b>이야.</p>
+
+    <h3>표에 나온 말, 쉽게 풀면</h3>
+    <p><b>· 관살(官殺)이 들어온다</b> — '관성'은 사주에서 <span class="hlb">직장·명예·규율, 그리고 여자한텐 남자·배우자</span>를 뜻해. 이게 한 해에 몰려 들어오면 일·이성·책임이 동시에 밀려온다는 거야. 좋게 쓰면 자리·인연이 들어오는 거고, 뿌리가 약한 신약한텐 부담·과부하로도 와. 2026·2037 같은 해가 그래.</p>
+    <p><b>· 충(沖) — 부딪힘.</b> 두 글자가 정면으로 충돌하는 거야. <span class="hl">子午충</span>은 네 배우자 자리(子)와 남편성(午)이 부딪히는 거라 <b>관계·감정이 크게 흔들리고 몸(수면·심장)도 예민</b>해져. <span class="hl">寅申충</span>은 역마끼리 부딪혀서 <b>이사·이직·해외 같은 이동수</b>로 나타나. 충은 나쁜 게 아니라 '크게 움직이는 해'라는 신호야 — 뭔가 확 바뀐다는 뜻.</p>
+    <p><b>· 형(刑) — 마찰·엉킴.</b> 충보다는 약한데, <span class="hlb">구설·시비·소소한 사고·건강 잔탈</span>로 오는 기운이야. 2025·2035·2037이 여기 해당돼. 큰일은 아니고 "이 해엔 말·서류·몸 조심" 정도로 보면 돼.</p>
+    <p><b>· 합(合) — 묶임·안정.</b> 두 글자가 손을 잡는 거야. <span class="hl">午未합·子丑합</span>이 오면 부딪히던 게 가라앉아서 <b>관계가 안정되고 정리가 잘 돼.</b> 그래서 2027·2033·2039가 편안한 해로 나오는 거고.</p>
+    <p><b>· 삼합(三合) — 세 글자가 뭉쳐 큰 기운을 만듦.</b> 네 원국의 寅·午에 특정 글자(戌)가 들어오면 <span class="hl">寅午戌이 뭉쳐 강한 불(火=관성) 기운을 완성</span>해. 관성이 결혼·직장·명예니까, 이게 완성되는 <b>2030·2042</b>에 결혼·커리어가 크게 자리 잡는 거야. 이 리딩에서 2030년을 결혼운 최고로 본 이유가 이거고.</p>
+    <p><b>· 겁재(劫財)가 겹친다</b> — '겁재'는 <span class="hlb">나와 같은 편이지만 내 재물을 나눠 갖는 기운</span>이야. 동료·경쟁자·동업자로도 오고, 지출·손재로도 와. 겁재가 겹치는 <b>2041년</b> 같은 해엔 큰 투자·보증·동업을 피하고 '방어'하는 게 맞아.</p>
+    <div class="easy"><b>제일 쉽게 한 줄로</b> — <b>충=크게 바뀜, 형=조심, 합=안정, 삼합=크게 이뤄짐, 겁재=돈 새니 방어.</b> 이 다섯 개만 알면 위 표가 전부 읽혀.</div>
+  </section>
+  <div class="hr"></div>
+
+  <!-- ★ 역마/해외 ★ -->
+  <section class="sec">
+    <div class="eyebrow">MOVEMENT — 역마(驛馬)·이동수</div>
+    <h2>한자리에 머무는 사주가<br>아니다 — 해외 기운</h2>
+    <p>네 원국엔 지지에 <b>寅木이 둘</b> 있고, 여기에 <b>지살(地殺)</b>이 붙어 있어. 寅·申·巳·亥는 명리에서 <b>역마(驛馬)</b>에 해당하는 글자인데 — <span class="hl">이동·변화·확장·해외를 뜻해.</span> 그게 하나도 아니고 둘이나 깔려 있으니, 넌 애초에 <b>한자리에 가만히 있는 사주가 아니야.</b></p>
+    <p>이게 현실에선 이렇게 나타나: 자주 옮겨 다니고(이사·이직·출장), 활동 반경이 넓고, 온라인·해외처럼 <span class="hlb">경계를 넘나드는 무대에서 오히려 운이 열려.</span> 국내 한 곳에 묶이기보다, 해외·글로벌·원격으로 판을 벌릴수록 재성(돈)이 살아나는 구조야.</p>
+    <p>특히 이 역마가 강하게 발동하는 해가 있어 — <b>2028년(戊申)</b>이야. 세운의 申金이 원국 寅木과 <b>寅申충(寅申沖)</b>을 일으키는데, 이건 대표적인 <span class="hl">'역마가 크게 움직이는 해'</span>야. 해외 이동, 이사, 거주지·활동지 변화, 큰 환경 전환이 실제로 올라오기 쉬운 시기지. 좋게 쓰면 넓은 무대로 도약이고, 나쁘게 쓰면 붕 떠서 정신없이 흔들리는 해라 — <b>이 해엔 '어디에 뿌리내릴지'를 의식적으로 정해두는 게</b> 중요해.</p>
+    <p>참고로 호진이 예전에 미국 유학 갔던 것도, 너희 관계에 이 역마 기운이 실려 있다는 신호로 볼 수 있어. 둘 다 이동·해외 코드가 있는 만큼, <span class="hlb">앞으로도 '한곳 정착'보다 '이동하며 넓히는' 라이프스타일이 자연스러운 커플</span>이야.</p>
+  </section>
+  <div class="hr"></div>
+
+  <!-- ★ 결혼운 확장 ★ -->
+  <section class="sec">
+    <div class="eyebrow">MARRIAGE — 연애·결혼 심층</div>
+    <h2>네 연애는 결국<br>'子午충' 하나로 설명돼</h2>
+    <p>네 사주에서 배우자 자리(일지)는 <b>子水</b>, 남편성(시지)은 <b>午火</b>인데, 이 둘이 정면으로 부딪혀. 이걸 <b>子午충</b>이라고 해. 배우자궁과 남편성이 서로 충하는 구조라, 관계 안에서 긴장과 변동이 반복되는 게 네 연애의 기본 성질이야.</p>
+    <p>이게 실제로 나타나는 모습은 — <span class="hlb">'일·사회적인 나'와 '사랑받고 싶은 나'가 계속 저울질하는 것</span>이야. 한쪽에 무게가 실리면 다른 쪽이 불안해져서, 연애 중에도 "일에 집중할까 / 이 사람에게 집중할까" 사이에서 마음이 오간다.</p>
+
+    <h3>1) 네 연애 패턴</h3>
+    <p>겉으론 "각자 삶 있지~" 쿨한 척하는데, 속으론 관계에 진심으로 몰입해. 대충 사귀는 걸 잘 못 하고, 마음 열면 "이 사람이랑 미래"까지 세트로 상상해버려. 근데 그걸 낯간지러워서 이성적인 척으로 덮지. 그래서 <span class="hlb">"같이 있는데 너 어딘가 한 발 빼고 있는 느낌"이란 소리 들은 적 있을 거야.</span></p>
+
+    <h3>2) 반복되는 싸움 사이클</h3>
+    <p>子午충은 <span class="hl">잔잔하게만 흘러가는 걸 못 견뎌.</span> 평소엔 참다가, "존중받는 느낌이 안 들 때" 갑자기 큰 말이 튀어나와. 초반엔 네가 맞춰주다가 → "나 혼자 애쓰나?" 싶어지면 → 머리가 과하게 돌아가며 상대 행동을 분석하기 시작하고 → 말 대신 태도(연락 텀, 건조한 말투)로 신호 보내다가 → 작은 계기 하나로 빵 터져. 상대는 "이 정도로 왜?" 싶은데 너한텐 그게 마지막 방아쇠야.</p>
+    <p><b>이거 깨는 법은 딱 하나.</b> <span class="hl">화 나기 전, 감정 초반에 "나 지금 이 부분 좀 섭섭해지려 해"를 바로 말로 꺼내는 것.</span> 넌 많이 참은 다음에야 말하는 구조라, 말 나올 땐 이미 감정이 너무 커져 있어. 싸움의 70%는 "너무 늦게 말해서" 생겨.</p>
+
+    <h3>3) 너한테 맞는 배우자상</h3>
+    <p>네가 도움받는 기운이 土(안정)·金(단단함)이라, 사주가 원하는 짝은 <span class="hlb">불처럼 열정 태우는 사람이 아니라, 흙처럼 안정감 주고 널 단단히 받쳐주는 사람</span>이야. 말 차분하고, 약속 지키고, 자기 삶 정리 잘 돼 있고, 겉은 담백한데 가까이 가면 정 깊은 타입. 연애를 '옵션'이 아니라 '삶의 기반'으로 보는 사람.</p>
+
+    <h3>4) 결혼하면 어떤 스타일?</h3>
+    <p>결혼 자체보다, <span class="hl">결혼 후에 '둘이 같이 뭔가를 만들어갈 때' 네 진짜 힘이 나와.</span> 같이 집 사고, 자산 굴리고, 인생 계획 짤 때 네 추진력·기획력이 확 살아나. 그래서 결혼 상대 고를 때 기준은 "이 사람이랑 같이 판을 키울 수 있나"로 보면 명확해져.</p>
+
+    <h3>5) 결혼 시기 — 연도로 딱</h3>
+    <table class="tbl">
+      <tr><th>시기</th><th>세운</th><th>결혼운</th></tr>
+      <tr><td class="yr">2026<small style="display:block;color:#999">28세</small></td><td class="gzsm">丙午</td><td><span class="mk mk-hold">보류</span> 子午충 재발 → 갈등·감정격동 큼. 결정 내리는 해 아님. 큰 말 참기.</td></tr>
+      <tr><td class="yr">2027<small style="display:block;color:#999">29세</small></td><td class="gzsm">丁未</td><td><span class="mk mk-go">진입</span> 충이 완화되고 관계 '틀'이 잡힘. 약속·상견례·구체화에 좋은 해.</td></tr>
+      <tr><td class="yr">2028<small style="display:block;color:#999">30세</small></td><td class="gzsm">戊申</td><td><span class="mk mk-mid">주의</span> 독립심 강해짐. 충동 이별 조심(후회 긴 구조). "연말까진 지켜보자" 기준 걸기.</td></tr>
+      <tr><td class="yr">2030<small style="display:block;color:#999">32세</small></td><td class="gzsm">庚戌</td><td><span class="mk mk-go">변동</span> 寅午戌 화국으로 <b>관성(남편성·책임)이 크게 강해지는 해</b>. 결혼 성사 가능성이 높은 시기지만, 관성은 '책임·큰 변동'도 뜻해 — 결혼이든 관계의 중대 결정이든 <b>크게 정해지는 해</b>.</td></tr>
+    </table>
+    <p><span class="hl">정리 — 2027년에 관계 틀 잡히고, 2030년(만 32세) 전후가 결혼 성사 흐름이 제일 강해.</span> 2026년은 그 전 단계라 감정 정리·기준 세우는 해로 쓰는 게 맞아.</p>
+    <div class="easy"><b>이 파트 용어</b> — <b>관성</b>=여자 사주에서 남자·남편을 뜻하는 기운(네 시지 午火가 그것). <b>子午충</b>=배우자 자리(子)와 남편성(午)이 부딪혀 관계에 긴장·변동이 생기는 것. <b>상관</b>=네 감정·표현이 튀어나오는 기운(참다가 세게 터지는 이유). 관성운이 배우자성을 자극하는 해에 결혼운이 강해진다.</div>
+  </section>
+  <div class="hr"></div>
+
+  <!-- ★ 궁합 신규 ★ -->
+  <section class="sec">
+    <div class="eyebrow">COMPATIBILITY — 최호진 궁합</div>
+    <h2>최호진(97.10.17)과<br>둘이 어떻게 맞물리나</h2>
+    <p>태어난 시간을 몰라서 년·월·일 세 기둥으로만 봤어(그래도 궁합 핵심은 다 나와). 호진 사주는 이래:</p>
+    <div class="paljaB">
+      <div><div class="t" style="text-align:center;font-size:11.5px;color:#6f6b64">나</div><div class="gzB wt">壬</div><div class="t" style="text-align:center;font-size:11px;color:#6f6b64">일</div></div>
+      <div><div class="t" style="text-align:center;font-size:11.5px;color:#6f6b64">편인</div><div class="gzB m">庚</div><div class="t" style="text-align:center;font-size:11px;color:#6f6b64">월</div></div>
+      <div><div class="t" style="text-align:center;font-size:11.5px;color:#6f6b64">정재</div><div class="gzB f">丁</div><div class="t" style="text-align:center;font-size:11px;color:#6f6b64">년</div></div>
+      <div><div class="gzB e">辰</div><div class="t" style="text-align:center;font-size:11px;color:#6f6b64">편관</div></div>
+      <div><div class="gzB e">戌</div><div class="t" style="text-align:center;font-size:11px;color:#6f6b64">편관</div></div>
+      <div><div class="gzB e">丑</div><div class="t" style="text-align:center;font-size:11px;color:#6f6b64">정관</div></div>
+    </div>
+    <p style="text-align:center;font-size:13px;color:#6f6b64;margin-bottom:26px">일간 <b>壬水</b> · <b>土(흙) 많은 신약 구조</b> · <span style="font-size:11px">시간 미상, 삼주 기준</span></p>
+
+    <div class="easy"><b>계산 정정 안내</b> — 앞서 호진을 庚金으로 봤는데, 일주 계산 기준을 바로잡으니 <b>壬水(壬辰)</b>가 맞아. 그래서 "둘 다 쇠라 친구 자리"였던 해석은 폐기하고, 아래로 정정했어. (시간 미상이라 삼주 기준이고, 일주는 만세력마다 미세차 가능.)</div>
+
+    <h3 style="color:#2a7d3d">좋은 면 ①  네가 '품는' 관계다 (편함의 정체)</h3>
+    <p>너는 庚金(쇠), 호진은 壬水(물)야. 그리고 <b>金生水 — 쇠가 물을 낳지.</b> 즉 <span class="hl">네가 호진을 生하는(낳고 품는) 관계</span>야. 명리로 <b>식신(食神)</b> 흐름인데, 뜻이 "내가 편하게 여기고 돌봐주고 싶은 상대"야. 네가 말한 <b>'편함 80'의 정체가 바로 이거</b>야 — 친구라 편한 게 아니라, 네가 이 사람을 품는 결이라 편한 거였어.</p>
+
+    <h3 style="color:#2a7d3d">좋은 면 ②  배우자궁이 물로 뭉친다</h3>
+    <p>네 배우자 자리(子)와 호진의 자리(辰)가 <b>子辰 반합(수국)</b>으로 묶여. 배우자궁끼리 같은 기운으로 합되는 건 <b>결이 잘 맞고 잘 안 끊기는 신호</b>야. 세 번 엇갈리고도 다시 붙은 게 이걸로 설명돼.</p>
+
+    <h3 style="color:#2a7d3d">좋은 면 ③  호진의 흙이 네 약점을 채운다</h3>
+    <p>호진은 <b>土(흙)가 3개나</b> 있는 사주야. 네 부족한 기운(용신 土)을 많이 가진 사람이라, <span class="hlb">너한테 안정·기반을 준다.</span> 게다가 호진 배우자궁 辰土는 네 庚金을 생조(生助)하는 자리라 — 실제로 걔가 비용·안정을 대는 게 이 구조랑 딱 맞아.</p>
+
+    <div class="hr" style="margin:34px 0"></div>
+
+    <h3 style="color:#2e5266">주의 면 ①  방향은 여전히 '네가 주는' 쪽</h3>
+    <p>金生水라 <span class="hl">기운이 너 → 호진으로 흘러가.</span> 좋은 면(품는 편안함)의 뒷면이야. 네가 마음·돌봄을 쏟는 게 자연스러운데, 지치면 "나만 주나?"로 바뀌기 쉬워. 다만 앞 버전처럼 <b>일방적 소모는 아니야</b> — 호진의 土가 너를 받쳐주니까(안정 제공). <b>너는 마음을 주고, 걘 기반을 주는</b> 교환이야. 실제 현실(걔가 돈 대고 네가 감정·추진력 쏟는 것)이랑 정확히 일치해.</p>
+
+    <h3 style="color:#2e5266">주의 면 ②  둘 다 신약이다</h3>
+    <p>너도 신약(庚金), 호진도 신약(壬水, 土에 눌림)이야. <span class="hl">둘 다 기초 체력이 강한 편은 아니라, 힘든 시기가 겹치면 서로 기대기만 하다 둘 다 처질 수 있어.</span> 한쪽이라도 회복·중심을 잡아줘야 하는 관계라, 둘 다 지친 시기엔 의식적으로 쉬어가는 게 필요해.</p>
+
+    <h3 style="color:#2e5266">주의 면 ③  2030 관성운은 부담도 함께</h3>
+    <p>네 원국 <b>子午충</b>은 그대로라, 결혼 근처에서도 관계 긴장은 계속 관리 대상이야. 그리고 2030년 관성 강화는 '결혼'만이 아니라 '책임·큰 변동'도 뜻해 — 결정이 나는 해지만, 그게 자동으로 해피엔딩은 아니라는 것.</p>
+
+    <div class="match">
+      <div class="mh"><span class="score">종합</span> 정정 궁합</div>
+      <p><b>좋은 면</b> — 네가 품는 편안한 관계(식신 흐름=네 '편함 80'의 근거), 배우자궁 子辰 반합, 호진의 흙이 네 기반 보완.<br><b>주의 면</b> — 여전히 네가 마음을 주는 방향(단 호진이 기반으로 되갚음), 둘 다 신약이라 동반 방전 주의, 子午충 관리 필요.<br><br>결론: <span class="hl">정정하니 앞 버전보다 결이 잘 맞는 궁합이야.</span> '친구라 설렘 없다'가 아니라 '네가 품어서 편안한' 관계고, 서로 다른 걸(마음↔기반) 주고받아. 잘 안 끊기는 것도 맞고. 남은 건 하나 — 둘 다 신약이니 <b>지칠 때 서로 기대기만 말고 쉬어가기</b>, 그리고 힘든 건 초반에 말하기.</p>
+    </div>
+    <div class="easy"><b>이 파트 용어</b> — <b>金生水</b>=쇠가 물을 낳음, 네가 호진을 품는 방향. <b>식신</b>=내가 편하게 돌보는 상대(편함의 근거). <b>子辰 반합</b>=배우자궁이 물로 뭉쳐 잘 맞음. <b>용신 土</b>=네게 필요한 기운인데 호진이 많이 가짐(안정 제공).</div>
+  </section>
+  <div class="hr"></div>
+
+  <!-- ★ 재회 서사 ★ -->
+  <section class="sec">
+    <div class="eyebrow">HISTORY — 너희 둘의 실제 궤적</div>
+    <h2>세 번 엇갈리고도<br>다시 붙은 이유</h2>
+    <p>너희 히스토리를 사주에 겹쳐보면 소름 돋게 맞아. 정리하면 — 23살에 만나 유학으로 헤어지고, 네가 연락했다 엇갈리고, 걔가 연락했는데 네가 안 만나고, 결국 <b>네가 당시 남친까지 정리하고 먼저 잡으러 가서</b> 지금 1년째잖아.</p>
+    <p>이게 궁합의 두 축이랑 정확히 겹쳐:</p>
+    <p><span class="hl">① 子辰 반합 — 몇 번을 엇갈려도 다시 엮이는 흐름.</span> 배우자궁이 물(水)로 묶인 커플은 "한 번 엮이면 잘 안 끊기는" 관계야. 실제로 너흰 세 번 엇갈리고도 결국 다시 붙었지. 이건 우연이 아니라 구조야.</p>
+    <p><span class="hlb">② 金生水 — 매번 먼저 움직인 게 너.</span> 연락도 너, 마지막에 정리하고 잡으러 간 것도 너. 네가 호진을 生하는(품는) 흐름이 실제 행동으로 그대로 나왔어. 이게 나쁜 게 아니라, 네가 이 사람을 품고 아끼는 결이라는 증거야. 다만 무게추가 네 쪽으로 기운 것도 사실이니, 호진이 <b>기반(안정·비용)으로 되갚고 있는지</b>를 같이 보면 균형이 보여.</p>
+    <div class="easy"><b>솔직하게 하나</b> — 살쪘다고 한 번 차였던 것, 그거 마음에 남아있을 거야. 그래서 지금도 은근히 "내가 부족한가" 검열이 돌기 쉬워. 근데 그건 그때 걔의 미성숙이었지 네 가치의 문제가 아니었어. 이 전제를 깔고 아래를 읽어.</div>
+  </section>
+  <div class="hr"></div>
+
+  <!-- ★ 현실 고민 3가지 ★ -->
+  <section class="sec">
+    <div class="eyebrow">REALITY CHECK — 네가 진짜 고민하는 것</div>
+    <h2>결혼까지 갈까,<br>이 세 개부터 풀자</h2>
+
+    <h3>Q1. 걔도 나를 진지하게 생각할까</h3>
+    <p>이건 사주로 확답 못 하는 영역이야. 대신 판단할 데이터는 네가 이미 갖고 있어 — <b>지난 1년.</b> 진지함은 말이 아니라 <span class="hl">'그가 먼저 꺼내는 것'</span>으로 보여. 체크리스트 세 개:</p>
+    <p>· 미래 얘기(집·결혼·몇 년 뒤 계획)를 <b>그가 먼저</b> 꺼낸 적 있나<br>· 자기 가족·친구한테 널 소개했나<br>· 네가 연락 안 해도 <b>그쪽에서</b> 챙기나</p>
+    <p>세 개 다 있었으면 진지한 거고, 전부 네가 리드했으면 <span class="hlb">한 번쯤 솔직하게 확인해볼 타이밍이야.</span> 잡으러 간 사람이라 을처럼 느껴질 수 있는데, 물어보는 건 매달리는 게 아니라 대등한 관계의 기본이야.</p>
+
+    <h3>Q2. 경제 격차 → 집안 반대</h3>
+    <p>집안 반대 여부는 사주로 못 찍어(현실 변수야). 근데 두 가지는 분명해.</p>
+    <p><span class="hl">지금 격차는 고정값이 아니야.</span> 네 재물운은 36세부터 크게 붙는 구조라(庚戌 대운), 지금 20대 후반은 격차가 제일 크게 느껴지는 시점일 뿐이야. 스냅샷으론 격차지만 궤적으론 넌 우상향 초입이야. 현재 잔고로만 자길 판단하지 마.</p>
+    <p>그리고 <span class="hlb">호진 사주가 안정·가정 지향(흙 많은 책임형)이라, 그 집안도 '얼마 버냐'보다 '성실하고 잘 맞냐'를 볼 결이야.</span> 물론 부모님은 만나봐야 아는 거지만, 최소한 상대가 간판만 보는 타입은 아니야.</p>
+
+    <h3>Q3. 스펙이 넘사벽이라</h3>
+    <p>이건 프레임 자체를 바꿔줄게. <span class="hl">넌 간판으로 승부하는 사주가 아니야.</span> 상관생재 — 실력·콘텐츠·자기 이름으로 크는 구조라, 남이랑 스펙표 나란히 놓는 것 자체가 너한테 안 맞는 게임이야. 무대가 다른 거지 급이 아래인 게 아니야.</p>
+    <p>결혼은 스펙 매칭이 아니라 <b>삶의 결이 맞느냐</b>야. 그리고 냉정하게, 스펙 높은 상대일수록 결국 옆에 두고 싶은 사람은 '나를 편하게 하고 성장하게 하는 사람'이야. 그게 네가 될 수 있는지가 핵심이지, 네 이력서가 핵심이 아니야.</p>
+
+    <div class="pull">결혼까지 갈지 판단하는 기준은 스펙도 격차도 아니고 딱 하나 — 이 사람이랑 있을 때 <span class="red">회복되냐, 방전되냐.</span> 1년 지난 지금 그 답이 어느 쪽인지가, 어떤 궁합 점수보다 정확하다.</div>
+  </section>
+  <div class="hr"></div>
+
+  <!-- ★ 실제 균형 ★ -->
+  <section class="sec">
+    <div class="eyebrow">THE BALANCE — 이 커플의 진짜 밸런스</div>
+    <h2>무게추, 생각보다<br>안 기울어 있다</h2>
+    <p>처음엔 "매번 내가 먼저 움직인 관계"라 무게추가 너한테만 쏠린 줄 알았지. 근데 실제를 까보면 이래 —</p>
+    <p>· 미래 얘기·가족 소개·먼저 챙김 → <b>다 있음</b><br>· 데이트비·숙박비·1년치 여행비 → <b>전부 호진이 부담</b><br>· "돈 모으라"는 말 → 부담 전가가 아니라 <b>결혼 목돈 같이 준비하자는 신호</b></p>
+    <div class="easy"><b>다시 보면</b> — 잘 사는 사람이 지출은 다 감당하면서 "그래도 우리 미래는 계획적으로 가자"고 하는 건, <b>머릿속에 이미 같이 사는 그림이 있다는 것</b>이야. 이거 궁합에서 나온 "널 안정시키는 배우자상(내가 다 해줄게 X / 같이 모으자 O)"이랑 정확히 맞아떨어져.</div>
+    <p>그래서 밸런스는 실제로 이래: <span class="hl">넌 관계에 진심·추진력을 붓고, 걘 현실 비용·안정을 댄다.</span> 감정 주도권은 네가, 현금은 걔가. 서로 <b>다른 걸 채워주는 균형</b>이야 — 한쪽으로 쏠린 관계가 아니라.</p>
+    <p>진지함은 이미 답 나왔어. <span class="hlb">이 사람은 널 '같이 갈 사람'으로 보고 있어.</span> 남은 스펙·격차 걱정은 관계의 문제가 아니라 네가 혼자 하는 걱정이고, 그건 앞에서 정리한 대로 — 격차는 좁혀지는 궤적이고, 결혼은 결이 맞는지야. 너희는 결이 맞아.</p>
+    <div class="pull">할 일은 하나 남았다 — 걱정을 관계 탓으로 돌리지 말고, <span class="red">네 감정을 초반에 말로 꺼내는 연습.</span> 이 커플은 그것만 지키면 오래 간다.</div>
+  </section>
+  <div class="hr"></div>
+
+  <!-- 건강 -->
+  <section class="sec">
+    <div class="eyebrow">HEALTH — 몸</div>
+    <h2>신약 사주가 놓치기 쉬운 몸</h2>
+    <p>신약이라 몸 관리는 선택이 아니라 기본이야. 약한 곳이 정해져 있어 — <span class="hlb">호흡기·피부·장(庚金), 그리고 수면·자율신경·심장(子午충).</span> 잠이 얕고, 긴장하면 두근대고, 컨디션 기복이 큰 편이야.</p>
+    <p>특히 기운이 몰려 몸에 과부하 걸리는 <b>2026년·2030년</b>엔 무리한 확장보다 수면·회복을 먼저 잡아. 신약한테는 <span class="hl">잘 나갈 때 쉬는 게 곧 재물·성과·관계까지 지키는 길</span>이야.</p>
+  </section>
+  <div class="hr"></div>
+
+  <!-- 결론 -->
+  <section class="sec">
+    <div class="eyebrow">SUMMARY — 한눈 요약</div>
+    <h2>결론만 딱</h2>
+    <p><b>1. 나.</b> 재능은 크게 타고났지만 뿌리가 약한 신약. '더 세게'보다 '뿌리부터 단단히, 오래'가 늘 먼저.</p>
+    <p><b>2. 돈.</b> 만든 게 곧 돈(상관생재). 큰돈은 체력 강해지는 <span class="hl">36세~, 세운으론 2030·2034~35</span>에 붙는다. 지금은 씨 뿌리기.</p>
+    <p><b>3. 일.</b> 조직으로 이름 쌓고 그걸 네 자산으로 빼내기. 독립은 '얇고 단단한 팀'으로.</p>
+    <p><b>4. 결혼.</b> 子午충이 축. <span class="hl">2027 틀 잡힘 → 2030년(32세) 성사 흐름.</span> 열정형보다 안정형(흙 기운)이 맞는 짝.</p>
+    <p><b>5. 호진 궁합</b> <span style="font-size:12px;color:#999">(壬水로 정정)</span>. <span class="hl">네가 품어서 편안한 관계(金生水=식신)</span>라 '편함 80'이 설명됨. 배우자궁 子辰 반합으로 잘 안 끊기고, 호진의 흙이 네 기반 보완. 주의: 네가 마음 주는 방향 + 둘 다 신약이라 동반 방전 조심.</p>
+    <p><b>6. 결혼 판단.</b> 스펙·격차 아니고 딱 하나 — <span class="hl">있을 때 회복되냐 방전되냐, 그리고 계속 나만 내주는 판을 언제까지 감당하냐.</span></p>
+    <div class="pull">신약이 크게 되는 길은 '더 많이'가 아니라 '안 지치고 오래'. 잘 나갈 때 쉬는 게 이 사주의 고급 전략이고, 그게 돈·건강·사랑을 동시에 지킨다.</div>
+  </section>
+
+</div>
+
+<section class="closing">
+  <div class="compass" style="color:#c9a06e">◈</div>
+  <h2 class="serif">사주는 정답을 주지 않는다.<br><span class="p">방향</span>을 짚어줄 뿐.<br>걷는 건 당신의 결이다.</h2>
+  <div class="disc">
+    ※ 사주명리로 타고난 '결'과 흐름을 읽는 자기성찰용 리딩입니다. 궁합·대운·세운 해석은 명리 규칙에 따른 것이며(호진 님은 태어난 시간 미상이라 삼주 기준, 일주는 만세력에 따라 미세차가 있을 수 있음), 미래나 특정 관계의 결과를 확정·보장하지 않습니다. 실제 결정은 두 분의 대화와 본인 판단으로 하시길 권합니다.
+  </div>
+  <div class="sig">結 · 명식 나침반 — for 이유진 &amp; 호진</div>
+</section>
+
+</body>
+</html>
