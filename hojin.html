@@ -91,6 +91,13 @@
   .closing .disc{color:#c5c8c4;border-top-color:rgba(238,242,240,.28)}
   .sig{margin-top:24px;font-family:'Cormorant Garamond',serif;font-size:15px;color:#7a7a7a;letter-spacing:.16em}
   .closing .sig{color:#d8d2c3}
+
+  @media print{
+    body{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    h2,h3,.eyebrow{break-after:avoid;page-break-after:avoid}
+    .match,.easy,.focus,.pull,.closing{break-inside:avoid;page-break-inside:avoid}
+    .tbl tr{break-inside:avoid;page-break-inside:avoid}
+  }
 </style>
 </head>
 <body>
